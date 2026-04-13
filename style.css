@@ -769,6 +769,17 @@ body::after {
   scroll-snap-align: start;
 }
 
+.project-card--clickable {
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.project-card--clickable:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.16);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.24);
+}
+
 .project-card__image {
   width: 100%;
   aspect-ratio: 1.32 / 1;
