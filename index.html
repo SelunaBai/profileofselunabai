@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>白星月</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Noto+Sans+SC:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar__inner">
+        <a class="topbar__brand" href="#hero">Seluna.Bai</a>
+        <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false">☰</button>
+        <nav class="topbar__nav" aria-label="页面导航">
+          <a href="#hero" data-i18n="nav_home">首页</a>
+          <a href="#about" data-i18n="nav_about">关于我</a>
+          <a href="#experience" data-i18n="nav_experience">工作经历</a>
+          <a href="#projects" data-i18n="nav_projects">项目经历</a>
+        </nav>
+        <div class="topbar__actions">
+          <button class="lang-toggle" type="button" aria-label="切换语言">EN</button>
+        </div>
+      </div>
+    </header>
+    <main class="hero" id="hero">
+      <div class="hero__backdrop"></div>
+      <section class="hero__content">
+        <div class="portrait-panel">
+          <div class="portrait-ring">
+            <div class="portrait">
+              <img
+                class="portrait__image"
+                src="./assets/profile.jpg"
+                alt="白星月的生活照"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"
+              />
+              <div class="portrait__placeholder" style="display: none;">
+                <span class="portrait__initials">BX</span>
+                <span class="portrait__hint">将你的生活照放到 assets/profile.jpg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="info-panel">
+          <p class="eyebrow" data-i18n="hero_eyebrow">你好，我是：</p>
+          <h1 class="name" data-i18n="hero_name">白星月</h1>
+          <p class="tagline" data-i18n="hero_tagline">Exploring AI is about building with it</p>
+
+          <nav class="socials" aria-label="社交媒体">
+            <a
+              class="social-link"
+              href="https://github.com/settings/keys"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M12 2C6.48 2 2 6.58 2 12.22c0 4.5 2.87 8.31 6.84 9.66.5.09.68-.22.68-.49 0-.24-.01-1.05-.01-1.91-2.78.62-3.37-1.21-3.37-1.21-.46-1.19-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.05 1.53 1.05.9 1.56 2.35 1.11 2.92.85.09-.67.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.09 0-1.13.39-2.05 1.03-2.77-.1-.26-.45-1.31.1-2.73 0 0 .84-.28 2.75 1.06A9.3 9.3 0 0 1 12 6.82c.85 0 1.71.12 2.51.36 1.91-1.34 2.75-1.06 2.75-1.06.55 1.42.2 2.47.1 2.73.64.72 1.03 1.64 1.03 2.77 0 3.96-2.34 4.82-4.57 5.08.36.32.68.95.68 1.92 0 1.39-.01 2.5-.01 2.84 0 .27.18.59.69.49A10.26 10.26 0 0 0 22 12.22C22 6.58 17.52 2 12 2Z"
+                />
+              </svg>
+              <span>GitHub</span>
+            </a>
+
+            <a
+              class="social-link"
+              href="https://www.xiaohongshu.com/user/profile/660fed410000000003032261?xsec_token=YB5ImLMPWM3ck_mE5OPw3jvPphsHT7LIbuhref1D9Q4S4=&xsec_source=app_share&xhsshare=CopyLink&shareRedId=ODwyRkhJODo2NzUyOTgwNjY2OTo2Nzw6&apptime=1775999822&share_id=f2fc7185ff5b4432b554582731dac307"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="小红书"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M5 4.5A2.5 2.5 0 0 1 7.5 2H20v17.5A2.5 2.5 0 0 0 17.5 17H7.5A2.5 2.5 0 0 0 5 19.5v-15Zm2.5-.5a.5.5 0 0 0-.5.5v12.76c.23-.1.48-.16.74-.22L8 17h9.5c.53 0 1.04.1 1.5.3V4H7.5Zm1.75 3h7.5v1.8h-7.5V7Zm0 3.4h7.5v1.8h-7.5v-1.8Zm0 3.4h5.3v1.8h-5.3v-1.8Z"
+                />
+              </svg>
+              <span data-i18n="social_xhs">小红书</span>
+            </a>
+          </nav>
+        </section>
+      </section>
+    </main>
+
+    <section class="about-section" id="about">
+      <div class="about-shell">
+        <header class="section-heading">
+          <p class="section-heading__eyebrow">About</p>
+          <h2 class="section-heading__title" data-i18n="about_title">关于我</h2>
+        </header>
+
+        <div class="about-grid">
+          <article class="about-card about-card--intro">
+            <p class="about-card__text" data-i18n="about_intro">
+              AI 产品经理，曾在不同公司探索 AI 与业务、用户痛点融合的场景，参与模型能力优化到产品落地的全流程设计与迭代，职责覆盖需求洞察、功能规划、数据与评估机制设计，并与工程和算法团队协同落地。
+            </p>
+          </article>
+
+          <aside class="about-card about-card--facts">
+            <div class="facts-block">
+              <h3 class="facts-block__title">
+                <span class="facts-block__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M12 4 2.5 8.6 12 13l7-3.25V15h2V8.6L12 4Zm-5.5 8.45V16c0 1.93 3.07 3.5 5.5 3.5s5.5-1.57 5.5-3.5v-3.55L12 15l-5.5-2.55Z"
+                    />
+                  </svg>
+                </span>
+                <span data-i18n="facts_education">教育经历</span>
+              </h3>
+              <div class="facts-list">
+                <p class="facts-list__item" data-i18n="edu_1">2023-2026年，武汉大学，新闻与传播硕士</p>
+                <p class="facts-list__item" data-i18n="edu_2">2019-2023年，武汉大学，新闻与传播学士</p>
+              </div>
+            </div>
+
+            <div class="facts-block">
+              <h3 class="facts-block__title">
+                <span class="facts-block__icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M7 3h10v2h2a1 1 0 0 1 1 1v2a5 5 0 0 1-4 4.9A5.99 5.99 0 0 1 13 16.9V19h4v2H7v-2h4v-2.1A5.99 5.99 0 0 1 8 12.9 5 5 0 0 1 4 8V6a1 1 0 0 1 1-1h2V3Zm-1 4v1a3 3 0 0 0 2.2 2.88A5.9 5.9 0 0 1 8 9V7H6Zm12 0h-2v2c0 .65-.07 1.28-.2 1.88A3 3 0 0 0 18 8V7Z"
+                    />
+                  </svg>
+                </span>
+                <span data-i18n="facts_awards">荣誉奖项</span>
+              </h3>
+              <div class="facts-list">
+                <p class="facts-list__item" data-i18n="award_1">🥇 国家奖学金</p>
+                <p class="facts-list__item" data-i18n="award_2">🚀 互联网+省级一等奖</p>
+                <p class="facts-list__item" data-i18n="award_3">🌟 挑战杯省级一等奖</p>
+                <p class="facts-list__item" data-i18n="award_4">🎨 大学生广告大赛国家级、省级奖项若干</p>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience-section" id="experience">
+      <div class="experience-shell">
+        <header class="section-heading">
+          <p class="section-heading__eyebrow">Experience</p>
+          <h2 class="section-heading__title" data-i18n="exp_title">工作经历</h2>
+        </header>
+
+        <p class="experience-summary" data-i18n="exp_summary">
+          非典型文科生的职业探索：扎根问题发现，从AI迈向无限未来
+        </p>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <div class="timeline-left">
+              <div class="company-card">
+                <h3 class="company-card__name" data-i18n="company_1">小红书</h3>
+                <div class="company-card__logo-wrap">
+                  <img class="company-card__logo company-card__logo--xiaohongshu" src="./assets/xiaohongshu.jpg" alt="小红书 logo" />
+                </div>
+                <div class="company-card__meta">
+                  <p class="company-card__role" data-i18n="role_1">AI产品经理</p>
+                  <div class="company-card__tags">
+                    <span class="company-tag company-tag--time">2025.11-2026.3</span>
+                    <span class="company-tag company-tag--location" data-i18n="loc_1">上海</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-center">
+              <span class="timeline-center__dot"></span>
+              <span class="timeline-center__line"></span>
+            </div>
+
+            <div class="timeline-right">
+              <div class="achievement-card">
+                <div class="achievement-card__title">
+                  <div class="achievement-card__title-main">
+                    <span class="achievement-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M4 5h4v4H4V5Zm6 1h10v2H10V6ZM4 10h4v4H4v-4Zm6 1h10v2H10v-2ZM4 15h4v4H4v-4Zm6 1h10v2H10v-2Z" />
+                      </svg>
+                    </span>
+                    <span data-i18n="core_work">核心工作</span>
+                  </div>
+                  <a
+                    class="achievement-card__link"
+                    href="https://my.feishu.cn/wiki/KFjQwRKBLiDghOkgSGIcu26Zno0"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="跳转到小红书核心工作详情"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M14 4h6v6h-2V7.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V4ZM5 6h6v2H7v9h9v-4h2v6H5V6Z" />
+                    </svg>
+                  </a>
+                </div>
+                <ul class="achievement-list">
+                  <li data-i18n="exp1_1">针对用户的复杂决策需求（如旅行规划）场景，基于模型“深度研究”能力从0到1构建产品demo，上线后“攻略模式”功能渗透率16.2%，人均日使用次数1.7次</li>
+                  <li data-i18n="exp1_2">为给模型训练提供高质量数据，搭建数据生产平台支持数据生产全流程能力，涵盖AI数据合成、精修微调、数据标注等功能</li>
+                  <li data-i18n="exp1_3">搭建数据管理平台支持数据留档、多维度管理及全链路跟踪，实现离线、标注和在线数据“上传-送标-合版-回捞”全流程的线上化流转及对数据的规范化管控</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-left">
+              <div class="company-card">
+                <h3 class="company-card__name" data-i18n="company_2">腾讯</h3>
+                <div class="company-card__logo-wrap">
+                  <img class="company-card__logo company-card__logo--tengxun" src="./assets/tengxun.avif" alt="腾讯 logo" />
+                </div>
+                <div class="company-card__meta">
+                  <p class="company-card__role" data-i18n="role_2">用户产品经理</p>
+                  <div class="company-card__tags">
+                    <span class="company-tag company-tag--time">2025.06-2026.09</span>
+                    <span class="company-tag company-tag--location" data-i18n="loc_2">深圳</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-center">
+              <span class="timeline-center__dot"></span>
+              <span class="timeline-center__line"></span>
+            </div>
+
+            <div class="timeline-right">
+              <div class="achievement-card">
+                <div class="achievement-card__title">
+                  <div class="achievement-card__title-main">
+                    <span class="achievement-card__icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24">
+                        <path d="M4 5h4v4H4V5Zm6 1h10v2H10V6ZM4 10h4v4H4v-4Zm6 1h10v2H10v-2ZM4 15h4v4H4v-4Zm6 1h10v2H10v-2Z" />
+                      </svg>
+                    </span>
+                    <span data-i18n="core_work">核心工作</span>
+                  </div>
+                  <a
+                    class="achievement-card__link"
+                    href="https://my.feishu.cn/wiki/Vn76wjXxCiRpFikNbGUcjb0nndb?from=from_copylink"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="跳转到腾讯核心工作详情"
+                  >
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M14 4h6v6h-2V7.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V4ZM5 6h6v2H7v9h9v-4h2v6H5V6Z" />
+                    </svg>
+                  </a>
+                </div>
+                <ul class="achievement-list">
+                  <li data-i18n="exp2_1">精华消息优化：针对精华消息点击率过低（1.6%）的问题，对精华消息“设精华-触达-看精华”整条用户核心使用路径进行体验优化</li>
+                  <li data-i18n="exp2_2">群文件优化：针对用户痛点提供文件筛选、排序能力提升文件查找效率，通过支持文件批量移动与删除、多层文件嵌套的能力提升用户文件管理效率</li>
+                  <li data-i18n="exp2_3">群直播优化：明确群直播逻辑由“以群为单位”变为“以人为单位”，初步制定产品核心页面改版方案</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-left">
+              <div class="company-card">
+                <h3 class="company-card__name" data-i18n="company_3">京东</h3>
+                <div class="company-card__logo-wrap">
+                  <img class="company-card__logo company-card__logo--jingdong" src="./assets/jingdong.jpeg" alt="京东 logo" />
+                </div>
+                <div class="company-card__meta">
+                  <p class="company-card__role" data-i18n="role_3">平台产品经理</p>
+                  <div class="company-card__tags">
+                    <span class="company-tag company-tag--time">2024.12-2025.03</span>
+                    <span class="company-tag company-tag--location" data-i18n="loc_3">北京</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-center">
+              <span class="timeline-center__dot"></span>
+              <span class="timeline-center__line"></span>
+            </div>
+
+            <div class="timeline-right">
+              <div class="achievement-card">
+                <div class="achievement-card__title">
+                  <span class="achievement-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M4 5h4v4H4V5Zm6 1h10v2H10V6ZM4 10h4v4H4v-4Zm6 1h10v2H10v-2ZM4 15h4v4H4v-4Zm6 1h10v2H10v-2Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n="core_work">核心工作</span>
+                </div>
+                <ul class="achievement-list">
+                  <li data-i18n="exp3_1">从0-1搭建地址库可视化平台呈现数据挖掘结果，实现数据查询提效近50%</li>
+                  <li data-i18n="exp3_2">在地址库维护平台新增“AOI视图”及批量维护等功能强化人工维护地址时AOI维度的维护习惯，提升人工维护效率。相关功能渗透率达75%，AOI维护准确率提升7%</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-left">
+              <div class="company-card">
+                <h3 class="company-card__name" data-i18n="company_4">百川智能</h3>
+                <div class="company-card__logo-wrap">
+                  <img class="company-card__logo company-card__logo--baichuan" src="./assets/baichuan.webp" alt="百川智能 logo" />
+                </div>
+                <div class="company-card__meta">
+                  <p class="company-card__role" data-i18n="role_4">AI产品经理</p>
+                  <div class="company-card__tags">
+                    <span class="company-tag company-tag--time">2024.04-2024.08</span>
+                    <span class="company-tag company-tag--location" data-i18n="loc_4">北京</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="timeline-center">
+              <span class="timeline-center__dot"></span>
+              <span class="timeline-center__line timeline-center__line--tail"></span>
+            </div>
+
+            <div class="timeline-right">
+              <div class="achievement-card">
+                <div class="achievement-card__title">
+                  <span class="achievement-card__icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M4 5h4v4H4V5Zm6 1h10v2H10V6ZM4 10h4v4H4v-4Zm6 1h10v2H10v-2ZM4 15h4v4H4v-4Zm6 1h10v2H10v-2Z" />
+                    </svg>
+                  </span>
+                  <span data-i18n="core_work">核心工作</span>
+                </div>
+                <ul class="achievement-list">
+                  <li data-i18n="exp4_1">产品设计及功能优化：通过数据分析、用户研究和竞品分析等手段发现并解决产品在页面和功能设计方面的问题，实现首页流失降低近50%，新增功能渗透率达43%</li>
+                  <li data-i18n="exp4_2">小说模型全链路优化：迭代数据标准，制定人工评测流程（后成为通用SOP）并对模型数据进行系统性评测以提升模型能力</li>
+                </ul>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="projects-section" id="projects">
+      <div class="projects-shell">
+        <header class="section-heading">
+          <p class="section-heading__eyebrow">Projects</p>
+          <h2 class="section-heading__title" data-i18n="projects_title">项目经历</h2>
+        </header>
+
+        <div class="projects-group">
+          <p class="projects-group__lead" data-i18n="projects_lead_1">借助AI，将“想法”落地成“产品”</p>
+          <div class="project-row" aria-label="项目作品">
+            <article class="project-card">
+              <img class="project-card__image" src="./assets/卡片1.png" alt="周杰伦专辑人格测试项目封面" />
+              <div class="project-card__body">
+                <div class="project-card__head">
+                  <h3 class="project-card__title" data-i18n="project_1_title">周杰伦专辑人格测试（JBTI）</h3>
+                  <a class="project-card__link" href="https://jbti.site" target="_blank" rel="noreferrer" aria-label="跳转到周杰伦专辑人格测试（JBTI）">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M14 4h6v6h-2V7.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V4ZM5 6h6v2H7v9h9v-4h2v6H5V6Z" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="project-card__desc" data-i18n="project_1_desc">测试你的人格最接近周杰伦那一张专辑的气质</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img class="project-card__image" src="./assets/卡片2.png" alt="城敢说项目封面" />
+              <div class="project-card__body">
+                <div class="project-card__head">
+                  <h3 class="project-card__title" data-i18n="project_2_title">城敢说</h3>
+                  <span class="project-card__link project-card__link--disabled" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M14 4h6v6h-2V7.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V4ZM5 6h6v2H7v9h9v-4h2v6H5V6Z" />
+                    </svg>
+                  </span>
+                </div>
+                <p class="project-card__desc" data-i18n="project_2_desc">一句话精准吐槽特定城市</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img class="project-card__image" src="./assets/卡片3.png" alt="中间站项目封面" />
+              <div class="project-card__body">
+                <div class="project-card__head">
+                  <h3 class="project-card__title" data-i18n="project_3_title">中间站</h3>
+                  <span class="project-card__link project-card__link--disabled" aria-hidden="true">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M14 4h6v6h-2V7.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V4ZM5 6h6v2H7v9h9v-4h2v6H5V6Z" />
+                    </svg>
+                  </span>
+                </div>
+                <p class="project-card__desc" data-i18n="project_3_desc">输入坐标一键获取“中点”见面地</p>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="projects-group">
+          <p class="projects-group__lead" data-i18n="projects_lead_2">追踪前沿AI产品，产品视角体验、拆解AI产品功能</p>
+          <div class="project-row" aria-label="思考心得">
+            <article class="project-card">
+              <img class="project-card__image" src="./assets/卡片4.jpeg" alt="豆包产品体验报告封面" />
+              <div class="project-card__body">
+                <div class="project-card__head">
+                  <h3 class="project-card__title" data-i18n="project_4_title">豆包产品体验报告</h3>
+                  <a class="project-card__link" href="https://my.feishu.cn/wiki/GyddwuQIGiG5k0k9mQgcLOotnpf" target="_blank" rel="noreferrer" aria-label="跳转到豆包产品体验报告">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M14 4h6v6h-2V7.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V4ZM5 6h6v2H7v9h9v-4h2v6H5V6Z" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="project-card__desc" data-i18n="project_4_desc">产品功能视角分析拆解豆包</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img class="project-card__image" src="./assets/卡片5.png" alt="Sora产品体验报告封面" />
+              <div class="project-card__body">
+                <div class="project-card__head">
+                  <h3 class="project-card__title" data-i18n="project_5_title">Sora产品体验报告</h3>
+                  <a class="project-card__link" href="https://my.feishu.cn/wiki/MzGCwzOPFiI6tHkXdPAc7UrVnIb" target="_blank" rel="noreferrer" aria-label="跳转到Sora产品体验报告">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M14 4h6v6h-2V7.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V4ZM5 6h6v2H7v9h9v-4h2v6H5V6Z" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="project-card__desc" data-i18n="project_5_desc">4小时实测第一款短视频AI产品</p>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <img class="project-card__image" src="./assets/卡片6.png" alt="星野产品体验报告封面" />
+              <div class="project-card__body">
+                <div class="project-card__head">
+                  <h3 class="project-card__title" data-i18n="project_6_title">星野产品体验报告</h3>
+                  <a class="project-card__link" href="https://my.feishu.cn/wiki/QGx9wkWPmiMw89ki7MqcCDSynyb" target="_blank" rel="noreferrer" aria-label="跳转到星野产品体验报告">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                      <path d="M14 4h6v6h-2V7.41l-8.29 8.3-1.42-1.42 8.3-8.29H14V4ZM5 6h6v2H7v9h9v-4h2v6H5V6Z" />
+                    </svg>
+                  </a>
+                </div>
+                <p class="project-card__desc" data-i18n="project_6_desc">产品&模型视角分析情感陪伴型AI产品</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <p class="site-footer__text">© 2026 | Seluna.Bai</p>
+      </div>
+    </footer>
+    <script>
+      const translations = {
+        zh: {
+          nav_home: "首页",
+          nav_about: "关于我",
+          nav_experience: "工作经历",
+          nav_projects: "项目经历",
+          hero_eyebrow: "你好，我是：",
+          hero_name: "白星月",
+          hero_tagline: "Exploring AI is about building with it",
+          social_xhs: "小红书",
+          about_title: "关于我",
+          about_intro:
+            "AI 产品经理，曾在不同公司探索 AI 与业务、用户痛点融合的场景，参与模型能力优化到产品落地的全流程设计与迭代，职责覆盖需求洞察、功能规划、数据与评估机制设计，并与工程和算法团队协同落地。",
+          facts_education: "教育经历",
+          facts_awards: "荣誉奖项",
+          edu_1: "2023-2026年，武汉大学，新闻与传播硕士",
+          edu_2: "2019-2023年，武汉大学，新闻与传播学士",
+          award_1: "🥇 国家奖学金",
+          award_2: "🚀 互联网+省级一等奖",
+          award_3: "🌟 挑战杯省级一等奖",
+          award_4: "🎨 大学生广告大赛国家级、省级奖项若干",
+          exp_title: "工作经历",
+          exp_summary: "非典型文科生的职业探索：扎根问题发现，从AI迈向无限未来",
+          company_1: "小红书",
+          company_2: "腾讯",
+          company_3: "京东",
+          company_4: "百川智能",
+          role_1: "AI产品经理",
+          role_2: "用户产品经理",
+          role_3: "平台产品经理",
+          role_4: "AI产品经理",
+          loc_1: "上海",
+          loc_2: "深圳",
+          loc_3: "北京",
+          loc_4: "北京",
+          core_work: "核心工作",
+          exp1_1: "针对用户的复杂决策需求（如旅行规划）场景，基于模型“深度研究”能力从0到1构建产品demo，上线后“攻略模式”功能渗透率16.2%，人均日使用次数1.7次",
+          exp1_2: "为给模型训练提供高质量数据，搭建数据生产平台支持数据生产全流程能力，涵盖AI数据合成、精修微调、数据标注等功能",
+          exp1_3: "搭建数据管理平台支持数据留档、多维度管理及全链路跟踪，实现离线、标注和在线数据“上传-送标-合版-回捞”全流程的线上化流转及对数据的规范化管控",
+          exp2_1: "精华消息优化：针对精华消息点击率过低（1.6%）的问题，对精华消息“设精华-触达-看精华”整条用户核心使用路径进行体验优化",
+          exp2_2: "群文件优化：针对用户痛点提供文件筛选、排序能力提升文件查找效率，通过支持文件批量移动与删除、多层文件嵌套的能力提升用户文件管理效率",
+          exp2_3: "群直播优化：明确群直播逻辑由“以群为单位”变为“以人为单位”，初步制定产品核心页面改版方案",
+          exp3_1: "从0-1搭建地址库可视化平台呈现数据挖掘结果，实现数据查询提效近50%",
+          exp3_2: "在地址库维护平台新增“AOI视图”及批量维护等功能强化人工维护地址时AOI维度的维护习惯，提升人工维护效率。相关功能渗透率达75%，AOI维护准确率提升7%",
+          exp4_1: "产品设计及功能优化：通过数据分析、用户研究和竞品分析等手段发现并解决产品在页面和功能设计方面的问题，实现首页流失降低近50%，新增功能渗透率达43%",
+          exp4_2: "小说模型全链路优化：迭代数据标准，制定人工评测流程（后成为通用SOP）并对模型数据进行系统性评测以提升模型能力",
+          projects_title: "项目经历",
+          projects_lead_1: "借助AI，将“想法”落地成“产品”",
+          projects_lead_2: "追踪前沿AI产品，产品视角体验、拆解AI产品功能",
+          project_1_title: "周杰伦专辑人格测试（JBTI）",
+          project_1_desc: "测试你的人格最接近周杰伦那一张专辑的气质",
+          project_2_title: "城敢说",
+          project_2_desc: "一句话精准吐槽特定城市",
+          project_3_title: "中间站",
+          project_3_desc: "输入坐标一键获取“中点”见面地",
+          project_4_title: "豆包产品体验报告",
+          project_4_desc: "产品功能视角分析拆解豆包",
+          project_5_title: "Sora产品体验报告",
+          project_5_desc: "4小时实测第一款短视频AI产品",
+          project_6_title: "星野产品体验报告",
+          project_6_desc: "产品&模型视角分析情感陪伴型AI产品"
+        },
+        en: {
+          nav_home: "Home",
+          nav_about: "About",
+          nav_experience: "Experience",
+          nav_projects: "Projects",
+          hero_eyebrow: "Hello, I'm:",
+          hero_name: "Seluna.Bai",
+          hero_tagline: "Exploring AI is about building with it",
+          social_xhs: "REDnote",
+          about_title: "About Me",
+          about_intro:
+            "AI product manager with experience connecting AI capabilities to business scenarios and user pain points, spanning the full cycle from model optimization to product launch. My work covers insight discovery, feature planning, data and evaluation design, and cross-functional execution with engineering and algorithm teams.",
+          facts_education: "Education",
+          facts_awards: "Awards",
+          edu_1: "2023-2026, Wuhan University, M.A. in Journalism and Communication",
+          edu_2: "2019-2023, Wuhan University, B.A. in Journalism and Communication",
+          award_1: "🥇 National Scholarship",
+          award_2: "🚀 Provincial First Prize, Internet+ Competition",
+          award_3: "🌟 Provincial First Prize, Challenge Cup",
+          award_4: "🎨 Multiple national and provincial awards in the College Advertising Competition",
+          exp_title: "Experience",
+          exp_summary: "A non-traditional liberal arts path: rooted in problem discovery, moving from AI toward an open-ended future.",
+          company_1: "Xiaohongshu",
+          company_2: "Tencent",
+          company_3: "JD.com",
+          company_4: "Baichuan AI",
+          role_1: "AI Product Manager",
+          role_2: "User Product Manager",
+          role_3: "Platform Product Manager",
+          role_4: "AI Product Manager",
+          loc_1: "Shanghai",
+          loc_2: "Shenzhen",
+          loc_3: "Beijing",
+          loc_4: "Beijing",
+          core_work: "Key Work",
+          exp1_1: "Built a 0-to-1 product demo for complex user decision-making scenarios such as trip planning, powered by deep research model capabilities. After launch, the guide mode feature reached a 16.2% penetration rate with 1.7 daily uses per user.",
+          exp1_2: "Built a data production platform to support end-to-end workflows for high-quality model training data, covering AI data synthesis, refinement, fine-tuning, and annotation.",
+          exp1_3: "Built a data management platform for archival, multi-dimensional management, and full-chain tracking, enabling online workflows across upload, annotation dispatch, version merging, and retrieval for offline, labeled, and online data.",
+          exp2_1: "Optimized highlight messages by redesigning the full core path from marking a message as highlight to delivery and viewing, addressing a low click-through rate of 1.6%.",
+          exp2_2: "Improved group file efficiency with filtering and sorting, and enhanced file management through batch move/delete and multi-level folder nesting.",
+          exp2_3: "Redefined the group live-streaming logic from group-based to user-based and drafted the initial redesign plan for key product pages.",
+          exp3_1: "Built a 0-to-1 visualized address-database platform to present data-mining results, improving query efficiency by nearly 50%.",
+          exp3_2: "Added AOI view and batch-maintenance capabilities to the address maintenance platform, strengthening AOI-based maintenance habits and improving manual efficiency. Feature penetration reached 75%, while AOI accuracy improved by 7%.",
+          exp4_1: "Improved product design and features through data analysis, user research, and competitive analysis, reducing homepage drop-off by nearly 50% and driving 43% penetration for new features.",
+          exp4_2: "Optimized the full workflow of a fiction model by iterating data standards, defining a manual evaluation process that later became a general SOP, and systematically evaluating model data to improve model quality.",
+          projects_title: "Projects",
+          projects_lead_1: "Using AI to turn ideas into real products",
+          projects_lead_2: "Tracking frontier AI products and analyzing them through a product lens",
+          project_1_title: "Jay Chou Album Personality Test (JBTI)",
+          project_1_desc: "Find out which Jay Chou album best matches your personality vibe.",
+          project_2_title: "City Roast",
+          project_2_desc: "Roast a specific city with one sharp sentence.",
+          project_3_title: "Midpoint",
+          project_3_desc: "Enter coordinates and get the best midpoint meeting spot in one click.",
+          project_4_title: "Doubao Product Review",
+          project_4_desc: "A product-feature analysis and teardown of Doubao.",
+          project_5_title: "Sora Product Review",
+          project_5_desc: "A four-hour hands-on test of the first short-video AI product.",
+          project_6_title: "Xingye Product Review",
+          project_6_desc: "An analysis of an AI companionship product from both product and model perspectives."
+        }
+      };
+
+      const toggle = document.querySelector(".lang-toggle");
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector(".topbar__nav");
+      let lang = "zh";
+
+      function applyLang(nextLang) {
+        lang = nextLang;
+        document.documentElement.lang = nextLang === "zh" ? "zh-CN" : "en";
+        document.querySelectorAll("[data-i18n]").forEach((node) => {
+          const key = node.getAttribute("data-i18n");
+          if (translations[nextLang][key]) node.textContent = translations[nextLang][key];
+        });
+        toggle.textContent = nextLang === "zh" ? "EN" : "中";
+      }
+
+      toggle.addEventListener("click", () => {
+        applyLang(lang === "zh" ? "en" : "zh");
+      });
+
+      menuToggle.addEventListener("click", () => {
+        const open = nav.classList.toggle("is-open");
+        menuToggle.setAttribute("aria-expanded", String(open));
+      });
+
+      nav.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          nav.classList.remove("is-open");
+          menuToggle.setAttribute("aria-expanded", "false");
+        });
+      });
+
+      applyLang("zh");
+    </script>
+  </body>
+</html>
